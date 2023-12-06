@@ -1,0 +1,21 @@
+#pragma once
+
+// TEMP - FOR TEST ONLY
+struct CS_COMBAT_MAP_ENTER_REQ : PACKET_HEADER
+{
+	CS_COMBAT_MAP_ENTER_REQ()
+	{
+		packet_id = static_cast<UINT16>(PACKET_ID::CS_COMBAT_MAP_ENTER_REQ);
+		packet_length = sizeof(CS_COMBAT_MAP_ENTER_REQ);
+	}
+};
+
+// TEMP - FOR TEST ONLY
+struct CS_COMBAT_MAP_LOAD_FINISH_CMD : PACKET_HEADER
+{
+	CS_COMBAT_MAP_LOAD_FINISH_CMD()
+	{
+		packet_id = static_cast<UINT16>(PACKET_ID::CS_COMBAT_MAP_LOAD_FINISH_CMD);
+		packet_length = sizeof(CS_COMBAT_MAP_LOAD_FINISH_CMD);
+	}
+};

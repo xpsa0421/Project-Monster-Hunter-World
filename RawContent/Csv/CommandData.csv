@@ -1,0 +1,17 @@
+StateType(이름),SectionName,InputMask,CommandSectionName
+Base,Stand,1,Move
+Base,Stand,2,Move
+Base,Stand,4,Move
+Base,Stand,8,Move
+Base,Stand,16,NormalAttack
+Base,Stand,32,SpecialAttack
+Base,Stand,64,UniqueAction
+Base,Stand,128,Dash
+Base,Move,1,Move
+Base,Move,2,Move
+Base,Move,4,Move
+Base,Move,8,Move
+Base,Move,16,NormalAttack
+Base,Move,32,SpecialAttack
+Base,Move,64,UniqueAction
+Base,Move,128,Dash

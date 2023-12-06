@@ -1,0 +1,6 @@
+id,model_type,model_index,model_group_id,model_bp
+int,string,int,int,array_string
+1,Avatar,0,0,text
+2,Monster,0,0,text
+3,Npc,0,0,text
+4,All,0,0,text

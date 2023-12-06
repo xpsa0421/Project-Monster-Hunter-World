@@ -1,0 +1,11 @@
+id,map_bg,minimap_image,map_3d_model,map_type,max_user,target_index,map_name
+int,string,string,string,string,int,int,string
+1,test,test,test,Login,1,1,test
+2,test,test,test,Lobby,1,1,test
+3,test,test,test,Launcher,1,1,test
+4,test,test,test,CharacterCreate,1,1,test
+5,test,test,test,CharacterSelect,1,1,test
+6,test,test,test,Dungeon,5,1,test
+7,test,test,test,Dungeon,5,1,test
+8,test,test,test,Dungeon,5,1,test
+9,test,test,test,Dungeon,5,1,test

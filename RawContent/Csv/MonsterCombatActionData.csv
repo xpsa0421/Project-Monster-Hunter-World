@@ -1,0 +1,13 @@
+action_id,monster_id,animation_name,montage_section_name,effect,damage_types,damage_amounts,triggers,conditions,condition_min_distance_from_target,condition_max_distance_from_target,attack_delay
+int,int,string,string,string,array_string,array_int,array_string,array_string,int,int,int
+0,0,BS_Fireball,None,None,Base|Fire,60|10,None,InRange,150,-1,4000
+1,0,AM_StandRoar,RoarPrep,RoarStagger,None,0,Transition|Sight,None,0,0,5000
+2,0,AM_AerialChainBreath,Default,None,Base|Fire,30|10,None,Flying|InRange,150,1000,3000
+3,0,AM_AerialStomp,Default,KnockBack,Base,40,None,InRange,0,1000,2000
+4,0,AM_StandRoar,RoarPrep,RoarStagger,None,0,Transition|Sight,None,0,0,5000
+5,0,BS_RecklessCharge,None,KnockBack,Base,20,None,None,200,0,3000
+6,0,BS_Fireball,None,None,Base|Fire,60|10,None,InRange,150,-1,4000
+7,0,BS_TurnInPlace,None,None,None,0,None,InRange,300,-1,0
+8,0,BS_AerialBreath,None,None,Base|Fire,40|10,None,Flying,0,0,3000
+9,0,BS_AerialCharge,None,KnockBack,Base,50,None,Flying,200,-1,0
+10,0,BS_AerialTalonStrike,None,KnockBack,Base|Poison,30|10,None,Flying|InRange,0,500,1000

@@ -1,0 +1,7 @@
+id,target,effect,duration_time,particle_path,calculation
+int,string,float,int,string,string
+101,health,15,0,test,plus
+102,health,25,0,test,plus
+103,damage,1.5,0,test,multi
+201,damage,1.25,0,test,multi
+202,damage,1.75,0,test,multi

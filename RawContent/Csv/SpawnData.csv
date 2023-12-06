@@ -1,0 +1,3 @@
+id,map_index,drop_group_id,spawn_count,patrol_range,obj_index,is_active
+int,array_int,int,int,float,array_int,bool
+1,6|7|8|9,1,10,30000,1,FALSE

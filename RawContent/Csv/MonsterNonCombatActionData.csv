@@ -1,0 +1,5 @@
+action_id,monster_id,animation_name,montage_section_name,triggers,conditions,condition_min_health_ratio,condition_max_health_ratio
+int,int,string,string,array_string,array_string,int,int
+0,0,BS_LookAround,None,InRange,None,0,0
+1,0,AM_IdleActions,Action1,None,None,0,0
+2,0,AM_IdleActions,Action2,None,None,0,0

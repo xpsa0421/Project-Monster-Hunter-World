@@ -1,0 +1,72 @@
+id,name,value,warehouse_max,pocket_max,init_count,type,description,kor_name,image_path,color,grade_image_path
+int,string,string,int,int,int,string,string,string,string,array_float,string
+101,potion,health,99,15,10,potion,체력을 약간 회복시켜주는 약,회복약,/Game/AZ/UI/az_item/potion,0.068|0.165|0.104|1.0,none
+102,greatPotion,health,99,10,5,potion,체력을 적당히 회복시켜주는 약,그레이트 회복약,/Game/AZ/UI/az_item/potion,0.068|0.165|0.104|1.0,/Game/AZ/UI/az_item/cmn_item00_ID_png_Sprite_195
+103,demonDrug,damage,99,5,2,potion,공격력을 상승시키는 약,귀인약,/Game/AZ/UI/az_item/potion,1.0|0.0|0.0|1.0,none
+201,normalBottle,normal,99,99,0,ammo,none,none,none,0.0|0.0|0.0|1.0,none
+202,powerBottle,damage,99,15,0,ammo,none,none,none,0.0|0.0|0.0|1.0,none
+1001,guildSword,this_is_guild_sword,1,1,1,weapon,대검,궁정왕검 [금성],/Game/AZ/UI/az_item/Gum,0.0|0.0|0.0|1.0,none
+1002,tunaSword,this_is_power_sword,1,1,1,weapon,대검,꽁꽁 순간냉동 참치,/Game/AZ/UI/az_item/Gum,0.0|0.0|0.0|1.0,none
+1003,batSword,blank,1,1,1,weapon,대검,귀신금봉 [원마왕],/Game/AZ/UI/az_item/Gum,0.0|0.0|0.0|1.0,none
+6501,normalBow,this_is_normal_bow,1,1,0,weapon,none,none,none,0.0|0.0|0.0|1.0,none
+6502,powerBow,this_is_power_bow,1,1,0,weapon,none,none,none,0.0|0.0|0.0|1.0,none
+10001,IronArmor,Iron_Armor,1,1,1,armor,아머,얼로이 메일,/Game/AZ/UI/az_item/mom,0.0|0.0|0.0|1.0,none
+10203,AnjanathArmor,blank,1,1,1,armor,아머,쟈나프 메일,/Game/AZ/UI/az_item/mom,0.0|0.0|0.0|1.0,none
+10241,PaolumuArmor,blank,1,1,1,armor,아머,우르무 메일,/Game/AZ/UI/az_item/mom,0.0|0.0|0.0|1.0,none
+10297,OdogaronArmor,Odogaron_armor,1,1,1,armor,아머,데스가론 메일,/Game/AZ/UI/az_item/mom,0.0|0.0|0.0|1.0,none
+10500,body_default,blank,-1,-1,0,armor,none,none,none,0.0|0.0|0.0|1.0,none
+10501,IronCoil,this_is_iron_coil,1,1,1,armor,코일,얼로이 코일,/Game/AZ/UI/az_item/baji,0.0|0.0|0.0|1.0,none
+10703,AnjanathCoil,blank,1,1,1,armor,코일,쟈나프 코일,/Game/AZ/UI/az_item/baji,0.0|0.0|0.0|1.0,none
+10741,PaolumuCoil,blank,1,1,1,armor,코일,우르무 코일,/Game/AZ/UI/az_item/baji,0.0|0.0|0.0|1.0,none
+10797,OdogaronCoil,Odogaron_coil,1,1,1,armor,코일,데스가론 코일,/Game/AZ/UI/az_item/baji,0.0|0.0|0.0|1.0,none
+11000,leg_default,blank,-1,-1,0,armor,none,none,none,0.0|0.0|0.0|1.0,none
+11001,IronGlove,this_is_iron_Glove,1,1,1,armor,글러브,얼로이 암,/Game/AZ/UI/az_item/son,0.0|0.0|0.0|1.0,none
+11203,AnjanathGlove,blank,1,1,1,armor,글러브,쟈나프 암,/Game/AZ/UI/az_item/son,0.0|0.0|0.0|1.0,none
+11241,PaolumuGlove,blank,1,1,1,armor,글러브,우르무 암,/Game/AZ/UI/az_item/son,0.0|0.0|0.0|1.0,none
+11297,OdogaronGlove,Odogaron_Glove,1,1,1,armor,글러브,데스가론 암,/Game/AZ/UI/az_item/son,0.0|0.0|0.0|1.0,none
+11500,arm_default,blank,-1,-1,0,armor,none,none,none,0.0|0.0|0.0|1.0,none
+11501,IronGreave,this_is_iron_Greave,1,1,1,armor,그리브,얼로이 그리브,/Game/AZ/UI/az_item/bal,0.0|0.0|0.0|1.0,none
+11703,AnjanathGreave,blank,1,1,1,armor,그리브,쟈나프 그리브,/Game/AZ/UI/az_item/bal,0.0|0.0|0.0|1.0,none
+11741,PaolumuGreave,blank,1,1,1,armor,그리브,우르무 그리브,/Game/AZ/UI/az_item/bal,0.0|0.0|0.0|1.0,none
+11797,OdogaronGreave,Odogaron_Greave,1,1,1,armor,그리브,데스가론 그리브,/Game/AZ/UI/az_item/bal,0.0|0.0|0.0|1.0,none
+12000,waist_default,blank,-1,-1,0,armor,none,none,none,0.0|0.0|0.0|1.0,none
+12001,IronHelmet,this_is_iron_helmet,1,1,1,armor,헬멧,얼로이 헬멧,/Game/AZ/UI/az_item/helmet,0.0|0.0|0.0|1.0,none
+12203,AnjanathHelmet,blank,1,1,1,armor,헬멧,쟈나프 헬멧,/Game/AZ/UI/az_item/helmet,0.0|0.0|0.0|1.0,none
+12241,PaolumuHelmet,blank,1,1,1,armor,헬멧,우르무 헬멧,/Game/AZ/UI/az_item/helmet,0.0|0.0|0.0|1.0,none
+12297,OdogaronHelmet,Odogaron_helmet,1,1,1,armor,헬멧,데스가론 헬멧,/Game/AZ/UI/az_item/helmet,0.0|0.0|0.0|1.0,none
+12500,head_default,blank,-1,-1,0,armor,none,none,none,0.0|0.0|0.0|1.1,none
+12501,femail_hair_0,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.2,none
+12502,femail_hair_1,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.3,none
+12503,femail_hair_2,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.4,none
+12504,femail_hair_3,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.5,none
+12505,femail_hair_4,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.6,none
+12506,femail_hair_5,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.7,none
+12507,femail_hair_6,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.8,none
+12508,femail_hair_7,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.9,none
+12509,femail_hair_8,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.10,none
+12510,femail_hair_9,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.11,none
+12511,femail_hair_10,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.12,none
+12512,femail_hair_11,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.13,none
+12513,femail_hair_12,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.14,none
+12514,femail_hair_13,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.15,none
+12515,femail_hair_14,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.16,none
+12516,femail_hair_15,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.17,none
+12517,femail_hair_16,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.18,none
+12518,femail_hair_17,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.19,none
+12519,femail_hair_18,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.20,none
+12520,femail_hair_19,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.21,none
+12521,femail_hair_20,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.22,none
+12522,femail_hair_21,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.23,none
+12523,femail_hair_22,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.24,none
+12524,femail_hair_23,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.25,none
+12525,femail_hair_24,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.26,none
+12526,femail_hair_25,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.27,none
+12527,femail_hair_26,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.28,none
+12528,femail_hair_27,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.29,none
+12529,femail_hair_28,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.30,none
+12530,femail_hair_29,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.31,none
+12531,femail_hair_30,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.32,none
+12532,femail_hair_31,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.33,none
+12533,femail_hair_32,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.34,none
+12534,femail_hair_33,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.35,none
+12535,femail_hair_34,blank,-1,-1,0,hair,none,none,none,0.0|0.0|0.0|1.36,none
