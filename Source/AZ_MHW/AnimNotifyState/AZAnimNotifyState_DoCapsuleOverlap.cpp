@@ -21,6 +21,7 @@ void UAZAnimNotifyState_DoCapsuleOverlap::NotifyBegin(USkeletalMeshComponent* me
 		AAZMonster* monster = Cast<AAZMonster>(mesh_comp->GetOwner());
 		if (monster)
 		{
+			UE_LOG(AZMonster, Warning, TEXT("Begin CapsuleOverlap: interval %f, radius %f, half_height %f"), check_interval_,  sphere_radius_, sphere_half_height_);
 			monster->AnimNotifyState_DoCapsuleOverlap_Begin();
 		}
 	}
@@ -38,7 +39,6 @@ void UAZAnimNotifyState_DoCapsuleOverlap::NotifyTick(USkeletalMeshComponent* mes
 		AAZMonster* monster = Cast<AAZMonster>(mesh_comp->GetOwner());
 		if (monster)
 		{
-			
 			monster->AnimNotifyState_DoCapsuleOverlap_Tick(socket_name_, sphere_radius_, sphere_half_height_, check_interval_);
 		}
 	}

@@ -128,7 +128,7 @@ void UAZSocketHolder::ShowWaitingWidget(bool is_forced)
 	UAZWidget_Waiting* waiting_widget = nullptr;
 	if (game_instance_.IsValid() && game_instance_->GetHUD())
 	{
-		waiting_widget = game_instance_->GetHUD()->OpenUI<UAZWidget_Waiting>(EUIName::AZWidget_Waiting, true);
+		//waiting_widget = game_instance_->GetHUD()->OpenUI<UAZWidget_Waiting>(EUIName::AZWidget_Waiting, true);
 	}
 
 	if (waiting_widget == nullptr)

@@ -235,15 +235,15 @@ struct FAZPlayerEquipmentState
 		
 		//TODO: 릴리즈시 각주풀기 
 		body_item_id = 10000+500;//Default
-		leg_item_id = 10500+500;//Default
-		arm_item_id = 11000+500;//Default
-		waist_item_id = 11500+500;//Default
-		head_item_id = 12000+500;//Default
+		leg_item_id = 10500+ 500;//Default
+		arm_item_id = 11000+ 500;//Default
+		waist_item_id = 11500+ 500;//Default
+		head_item_id = 12000+ 500;//Default
 		hair_item_id = 12501+0;//Default
 		
 		
 		weapon_type = 0;//0~13 무기종류(14종)
-		first_weapon_item_id = 1000+(weapon_type*500) + 003;//대검
+		first_weapon_item_id = 1000+(weapon_type*500) + 001;//대검
 		second_weapon_item_id = 0;//무기아이디
 		
 		consume_item_id = 101;

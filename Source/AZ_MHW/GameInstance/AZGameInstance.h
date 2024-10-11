@@ -12,6 +12,7 @@
 #include "Engine/GameInstance.h"
 #include "AZ_MHW/GameInstance/AZGameInstanceData.h"
 #include "AZ_MHW/PlayerController/AZPlayerController.h"
+#include "AZ_MHW/PlayerController/AZPlayerController_Server.h"
 #include "AZ_MHW/Character/Player/AZPlayer_Playable.h"
 #include "AZGameInstance.generated.h"
 
@@ -171,6 +172,8 @@ public:
 
 	// 캐릭터 동기화
 	FSetMoveInfo set_move_info_;
+	AAZPlayerController_Server* server_controller_;
+
 // client end
 
 public:

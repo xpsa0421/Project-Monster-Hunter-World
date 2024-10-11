@@ -154,10 +154,10 @@ void AAZPlayer_Origin::PostProcessDamage(AActor* damage_instigator, const FHitRe
 			player_state->character_state_.current_health_point = 0;
 		}
 		
-		if(const auto& server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController()))
+		if(game_instance_->server_controller_ != nullptr)
 		{
-			server_controller->Send_HitPlayer_Playable(player_character_state_->uid_,angle,total_damage);
-			server_controller->BroadCast_HitPlayer_Remotable(player_character_state_->uid_,angle,total_damage);
+			game_instance_->server_controller_->Send_HitPlayer_Playable(player_character_state_->uid_,angle,total_damage);
+			game_instance_->server_controller_->BroadCast_HitPlayer_Remotable(player_character_state_->uid_,angle,total_damage);
 		}
 		
 		if (GEngine)
@@ -206,9 +206,9 @@ void AAZPlayer_Origin::AnimNotify_OnUseItem()
 					}
 					
 					int client_index = player_character_state_->uid_;
-					const auto server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
-					server_controller->BroadCast_UpdatePlayerState_Remotable(client_index,0,result_health_point,0);
-					server_controller->Send_UpdatePlayerState_Playable(client_index,0,result_health_point,0);
+					//const auto server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
+					game_instance_->server_controller_->BroadCast_UpdatePlayerState_Remotable(client_index,0,result_health_point,0);
+					game_instance_->server_controller_->Send_UpdatePlayerState_Playable(client_index,0,result_health_point,0);
 				}
 				break;
 			case ECalculation::multi:

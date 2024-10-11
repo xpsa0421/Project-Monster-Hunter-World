@@ -30,6 +30,7 @@ AAZMonster::AAZMonster()
 	// Initialise common properties
 	monster_id_ = boss_id_ = -1;
 	active_action_id_ = -1;
+	overlap_check_timer_ = 0;
 	SetGenericTeamId(static_cast<uint8>(EObjectType::Monster));
 
 	// Set default objects to hit check
@@ -254,7 +255,6 @@ void AAZMonster::BeginFly()
 	float angle = GetRelativeAngleToLocation(aggro_component_->GetTargetLocation());
 	SetTargetAngle(angle);
 
-	UE_LOG(AZMonster, Warning, TEXT("Begin fly"));
 	packet_handler_component_->Send_SC_MONSTER_ACTION_START_CMD();
 }
 
@@ -269,7 +269,6 @@ void AAZMonster::EndFly()
 	float angle = GetRelativeAngleToLocation(aggro_component_->GetTargetLocation());
 	SetTargetAngle(angle);
 
-	UE_LOG(AZMonster, Warning, TEXT("End fly"));
 	packet_handler_component_->Send_SC_MONSTER_ACTION_START_CMD();
 }
 
@@ -460,7 +459,9 @@ void AAZMonster::AnimNotifyState_DoCapsuleOverlap_Begin()
 
 void AAZMonster::AnimNotifyState_DoCapsuleOverlap_Tick(FName socket_name, float radius, float half_height, float check_interval)	
 {
-	if (overlap_check_timer_ += GetWorld()->GetDeltaSeconds() < check_interval) return;
+	float ds = GetWorld()->GetDeltaSeconds();
+	overlap_check_timer_ += ds;
+	if (overlap_check_timer_ < check_interval) return;
 	else overlap_check_timer_ = 0.0f;
 		
 	TArray<AActor*, FDefaultAllocator> ignore_actors;
@@ -477,11 +478,12 @@ void AAZMonster::AnimNotifyState_DoCapsuleOverlap_Tick(FName socket_name, float 
 	// Do capsule overlap
 	UKismetSystemLibrary::CapsuleOverlapActors(GetWorld(), trace_start_loc, radius, half_height, hit_object_types_, AAZCharacter::StaticClass(), ignore_actors, overlapped_actors);
 #ifdef WITH_EDITOR
-	DrawDebugCapsule(GetWorld(), trace_start_loc, half_height, radius, FQuat(), FColor::Red, false, 5.0f, 0U, 2.f);
+	DrawDebugCapsule(GetWorld(), trace_start_loc, half_height, radius, FQuat::Identity, FColor::Red, false, 5.0f, 0U, 2.f);
 #endif
 	
 	for (auto actor : overlapped_actors)
 	{
+		UE_LOG(AZMonster, Log, TEXT("[AAZMonster] Capsule trace overlapped %s"), *actor->GetName());
 		AAZPlayer_Origin* overlapped_player = Cast<AAZPlayer_Origin>(actor);
 		if (overlapped_player && !overlapped_actors_.Find(overlapped_player))
 		{

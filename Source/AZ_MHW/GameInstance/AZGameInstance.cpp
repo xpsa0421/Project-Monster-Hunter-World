@@ -38,7 +38,6 @@ UAZGameInstance::UAZGameInstance()
 void UAZGameInstance::Init()
 {
 	Super::Init();
-
 	UAZGameSingleton::instance();
 
 	recv_buffer_offset_ = 0;

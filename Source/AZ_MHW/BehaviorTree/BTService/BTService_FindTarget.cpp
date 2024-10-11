@@ -12,7 +12,6 @@
 UBTService_FindTarget::UBTService_FindTarget(const FObjectInitializer& object_initializer) : Super(object_initializer)
 {
 	NodeName = "FindTarget";
-	Interval = update_interval_;
 	blackboard_key.AddObjectFilter(this, GET_MEMBER_NAME_CHECKED(UBTService_FindTarget, blackboard_key), AAZCharacter::StaticClass());
 }
 

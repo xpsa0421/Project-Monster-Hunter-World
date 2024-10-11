@@ -1,4 +1,4 @@
-﻿// Copyright Team AZ. All Rights Reserved.
+// Copyright Team AZ. All Rights Reserved.
 
 
 #include "AZObjectMgr_Server.h"
@@ -13,7 +13,7 @@ UAZObjectMgr_Server::UAZObjectMgr_Server()
 	
 	// TEMP
 	//spawn_array_.Add(FMonsterSpawnInfo(0, EBossRank::Low, FVector(2010,-110,200), FRotator(0,180,0)));
-	spawn_array_.Add(FMonsterSpawnInfo(0, EBossRank::Low, FVector(65676.0,41558.0,6330.0), FRotator(0,0,0)));
+	spawn_array_.Add(FMonsterSpawnInfo(0, EBossRank::Low, FVector(70000,41558.0,6330.0), FRotator(0,0,0)));
 }
 
 void UAZObjectMgr_Server::BeginDestroy()

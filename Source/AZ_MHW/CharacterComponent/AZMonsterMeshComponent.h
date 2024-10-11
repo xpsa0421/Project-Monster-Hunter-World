@@ -31,14 +31,7 @@ protected:
 	void SetMaterialVisibility(FName slot_name, bool is_visible);
 
 	// Responders to body state changes
-	UFUNCTION() void OnBodyPartWounded(EMonsterBodyPart body_part);
-	UFUNCTION() void OnBodyPartWoundHealed(EMonsterBodyPart body_part);
-	UFUNCTION() void OnBodyPartBroken(EMonsterBodyPart body_part);
 	UFUNCTION() void OnBodyPartSevered(EMonsterBodyPart body_part);
-	UFUNCTION() void OnDeath();
-
-	UFUNCTION() void CloseEyes(bool should_close);
-	UFUNCTION() void BlinkEyes();
 	
 private:
 	TObjectPtr<class AAZMonster> owner_;
@@ -53,8 +46,4 @@ private:
 
 	UPROPERTY(VisibleAnywhere, Category = "AZ | Material")
 	TMap<EMonsterBodyPart, int32> mesh_material_indices_cutsurface_;
-
-	// eye blink
-	UPROPERTY(VisibleAnywhere) bool eyes_closed_;
-	FTimerHandle blink_eye_timer_handle_;
 };

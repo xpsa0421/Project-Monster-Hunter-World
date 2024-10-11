@@ -451,4 +451,6 @@ void AAZGameMode_InGame::OnCombatLevelLoaded(ULevel* in_level, UWorld* in_world)
 	// TEMP LOAD FINISHED PACKET
 	CS_COMBAT_MAP_LOAD_FINISH_CMD packet;
 	game_instance_->GetSocketHolder(ESocketHolderType::Game)->SendPacket(&packet, packet.packet_length);
+
+	OnEnterCombatLevel.Broadcast();
 }

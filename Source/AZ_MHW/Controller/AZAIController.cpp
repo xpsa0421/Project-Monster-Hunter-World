@@ -138,7 +138,6 @@ void AAZAIController::SetUpPerceptionSystem()
 	// sight_->DetectionByAffiliation.bDetectNeutrals = false;
 }
 
-//TEMP CHECK TOMORROW
 ETeamAttitude::Type AAZAIController::GetTeamAttitudeTowards(const AActor& other_actor) const
 {
 	// Check if pawn

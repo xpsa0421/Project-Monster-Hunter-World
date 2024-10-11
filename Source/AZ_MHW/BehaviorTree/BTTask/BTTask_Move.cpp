@@ -10,7 +10,6 @@
 #include "AZ_MHW/Character/Monster/AZMonster.h"
 #include "AZ_MHW/Util/AZUtility.h"
 
-//@TODO Change to rootmotion based movement
 
 UBTTask_Move::UBTTask_Move()
 {

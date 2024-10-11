@@ -93,7 +93,15 @@ float UAZMonsterHealthComponent::GetStaminaRatio() const
 bool UAZMonsterHealthComponent::IsWounded(EMonsterBodyPart body_part)
 {
 	const auto state = body_part_states_.Find(body_part);
-	return state ? false : state->is_wounded;
+	if (state != nullptr) return state->is_wounded;
+	else return false;
+}
+
+bool UAZMonsterHealthComponent::IsSevered(EMonsterBodyPart body_part)
+{
+	const auto state = body_part_states_.Find(body_part);
+	if (state != nullptr) return state->is_severed;
+	else return false;
 }
 
 bool UAZMonsterHealthComponent::IsPendingKill() const
@@ -167,6 +175,9 @@ float UAZMonsterHealthComponent::ProcessDamage(AActor* damage_instigator, const 
 	const EMonsterBodyPart damaged_body_part = static_cast<EMonsterBodyPart>(hit_result.PhysMaterial.Get()->SurfaceType.GetValue());
 	const EDamageType damage_type = attack_info.damage_array[0].type;
 	if (!IsReceivedAttackValid(damage_type, damaged_body_part)) return 0.f;
+
+	// If already severed, cannot do damage
+	if (IsSevered(damaged_body_part)) return 0.f;
 
 	// TODO status effects
 	EAttackEffectType attack_effect = attack_info.attack_effect;

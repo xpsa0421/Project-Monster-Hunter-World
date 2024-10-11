@@ -15,7 +15,7 @@ UCLASS()
 class AZ_MHW_API AAZGameMode_InGame : public AAZGameMode
 {
 	GENERATED_BODY()
-	
+
 public:
 	AAZGameMode_InGame();
 
@@ -71,6 +71,9 @@ public:
 	UFUNCTION(BlueprintCallable) void OpenQuestWidget(); 
 	UFUNCTION() void RequestWarpCombatLevel();
 	void OnCombatLevelLoaded(ULevel* in_level, UWorld* in_world);
+
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnEnterCombatLevelSignature);
+	UPROPERTY(BlueprintAssignable) FOnEnterCombatLevelSignature OnEnterCombatLevel;
 
 public:
 	DECLARE_EVENT_OneParam(AAZGameMode_InGame, FAppearObject, AActor*);

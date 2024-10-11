@@ -114,7 +114,6 @@ void UAZWidget_CharacterSelect::OnSelectCharacter_0()
 	packet.character_index = current_selected_character_state_->cid_;
 	packet.packet_id = (int)PACKET_ID::CS_PLAYER_ORIGIN_CREATE_REQ;
 	game_instance_->GetSocketHolder(ESocketHolderType::Game)->SendPacket(&packet, packet.packet_length);
-	//UGameplayStatics::OpenLevel(GetWorld(), FName("/Game/AZ/ServerDebug/ServerDebug_Level"),true,"?game=/Game/AZ/GameMode/BP_InGame.BP_InGame_C");
 	UGameplayStatics::OpenLevel(GetWorld(), FName("/Game/AZ/Map/Map_Main"),true,"?game=/Game/AZ/GameMode/BP_InGame.BP_InGame_C");
 }
 
@@ -124,7 +123,6 @@ void UAZWidget_CharacterSelect::OnSelectCharacter_1()
 	packet.character_index = current_selected_character_state_->cid_;
 	packet.packet_id = (int)PACKET_ID::CS_PLAYER_ORIGIN_CREATE_REQ;
 	game_instance_->GetSocketHolder(ESocketHolderType::Game)->SendPacket(&packet, packet.packet_length);
-	//UGameplayStatics::OpenLevel(GetWorld(), FName("/Game/AZ/ServerDebug/ServerDebug_Level"),true,"?game=/Game/AZ/GameMode/BP_InGame.BP_InGame_C");
 	UGameplayStatics::OpenLevel(GetWorld(), FName("/Game/AZ/Map/Map_Main"),true,"?game=/Game/AZ/GameMode/BP_InGame.BP_InGame_C");
 }
 
@@ -134,7 +132,6 @@ void UAZWidget_CharacterSelect::OnSelectCharacter_2()
 	packet.character_index = current_selected_character_state_->cid_;
 	packet.packet_id = (int)PACKET_ID::CS_PLAYER_ORIGIN_CREATE_REQ;
 	game_instance_->GetSocketHolder(ESocketHolderType::Game)->SendPacket(&packet, packet.packet_length);
-	//UGameplayStatics::OpenLevel(GetWorld(), FName("/Game/AZ/ServerDebug/ServerDebug_Level"),true,"?game=/Game/AZ/GameMode/BP_InGame.BP_InGame_C");
 	UGameplayStatics::OpenLevel(GetWorld(), FName("/Game/AZ/Map/Map_Main"),true,"?game=/Game/AZ/GameMode/BP_InGame.BP_InGame_C");
 }
 
@@ -154,7 +151,9 @@ void UAZWidget_CharacterSelect::OnHoverCharacter_0()
 	current_selected_character_state_->equipment_state_.first_weapon_item_id =array[0].weapon_id;
 	current_selected_character_->SetPlayerState(current_selected_character_state_);
 	
-	current_selected_character_->spring_arm_comp_->SetWorldLocation(FVector(0,75,75));
+	current_selected_character_->spring_arm_comp_->TargetArmLength = 150.f;
+	current_selected_character_->spring_arm_comp_->SetWorldRotation(FRotator(-5, 160, 0));
+	current_selected_character_->spring_arm_comp_->SetWorldLocation(FVector(0, 45, 40));
 }
 
 void UAZWidget_CharacterSelect::OnHoverCharacter_1()
@@ -172,7 +171,10 @@ void UAZWidget_CharacterSelect::OnHoverCharacter_1()
 	current_selected_character_state_->equipment_state_.weapon_type =array[1].weapon_type;
 	current_selected_character_state_->equipment_state_.first_weapon_item_id =array[1].weapon_id;
 	current_selected_character_->SetPlayerState(current_selected_character_state_);
-	current_selected_character_->spring_arm_comp_->SetWorldLocation(FVector(0,75,75));
+
+	current_selected_character_->spring_arm_comp_->TargetArmLength = 150.f;
+	current_selected_character_->spring_arm_comp_->SetWorldRotation(FRotator(-5, 160, 0));
+	current_selected_character_->spring_arm_comp_->SetWorldLocation(FVector(0, 45, 40));
 }
 
 void UAZWidget_CharacterSelect::OnHoverCharacter_2()
@@ -190,5 +192,8 @@ void UAZWidget_CharacterSelect::OnHoverCharacter_2()
 	current_selected_character_state_->equipment_state_.weapon_type =array[2].weapon_type;
 	current_selected_character_state_->equipment_state_.first_weapon_item_id =array[2].weapon_id;
 	current_selected_character_->SetPlayerState(current_selected_character_state_);
-	current_selected_character_->spring_arm_comp_->SetWorldLocation(FVector(0,75,75));
+
+	current_selected_character_->spring_arm_comp_->TargetArmLength = 150.f;
+	current_selected_character_->spring_arm_comp_->SetWorldRotation(FRotator(-5, 160, 0));
+	current_selected_character_->spring_arm_comp_->SetWorldLocation(FVector(0, 45, 40));
 }

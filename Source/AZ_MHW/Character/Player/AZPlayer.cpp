@@ -113,8 +113,6 @@ void AAZPlayer::BeginPlay()
 	//소켓 액터생성
 	CreateSocketActor(TEXT("MainHand"),TEXT("Socket_Back"));
 	CreateSocketActor(TEXT("SubHand"),TEXT("Socket_Back"));
-	
-	
 
 	//다이나믹 인스턴스 머테리얼 생성(머리카락 색)
 	hair_mesh_->SetSkeletalMesh(UAZGameSingleton::instance()->player_mgr_->GetSkeletalMesh(12501));

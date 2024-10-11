@@ -37,8 +37,6 @@ public:
 	class AAZHUD* GetHUD();
 	// FIXME (병합 후 구현하기) // 임시구현
 	APlayerController* GetPlayerController();
-	//class ALHPlayerController* GetPlayerController();
-	//class ALHPlayerController_InGame* GetPlayerController_InGame();
 
 	// FIXME (병합 후 구현하기)
 	//class AAZPlayer_Playable* GetPlayer();

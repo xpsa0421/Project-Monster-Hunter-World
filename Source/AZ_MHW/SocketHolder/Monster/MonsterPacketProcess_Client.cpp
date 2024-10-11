@@ -36,8 +36,6 @@ void UPacketFunction::Receive_SC_MONSTER_SPAWN_END_CMD(const SC_MONSTER_SPAWN_EN
 	// TODO TEMP 플레이어로직, 플레이어 안의 함수로 빼기 / 실제로는 시네마틱 끝나고 이동해야할듯
 	const auto& player_controller = Cast<AAZPlayerController_InGame>(game_instance_->GetPlayerController());
 
-	//player_controller->playable_player_->SetActorLocation(FVector(-190,9000,270));
-	//player_controller->playable_player_->SetActorLocation(FVector(-190,400,270));
 	player_controller->playable_player_->SetActorLocation(FVector(80678,41570,4261));
 	player_controller->playable_player_->SetActorRotation(FRotator(0,-180,0));
 	player_controller->TempSendForceUpdatePlayer_Origin();

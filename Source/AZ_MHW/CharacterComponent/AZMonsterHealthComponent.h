@@ -26,6 +26,7 @@ public:
 	float GetHealthRatio() const;
 	float GetStaminaRatio() const;
 	bool IsWounded(EMonsterBodyPart body_part);
+	bool IsSevered(EMonsterBodyPart body_part);
 	bool IsPendingKill() const;
 	TMap<EMonsterBodyPart, FBossBodyPartState>* GetBodyPartStates();
 

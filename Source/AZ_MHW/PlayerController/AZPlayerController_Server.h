@@ -1,9 +1,9 @@
-﻿// Copyright Team AZ. All Rights Reserved.
+// Copyright Team AZ. All Rights Reserved.
 
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AZPlayerController.h"
+//#include "AZPlayerController.h"
 #include "InputActionValue.h"
 #include "AZPlayerController_Server.generated.h"
 
@@ -18,7 +18,7 @@ class AAZPlayer_Origin;
  * 또한 그러한 입력의 결과를 각 클라이언트의 원격 객체에 전파하는 역할도 있습니다. 
  */
 UCLASS()
-class AZ_MHW_API AAZPlayerController_Server : public AAZPlayerController
+class AZ_MHW_API AAZPlayerController_Server : public AActor//AAZPlayerController
 {
 	GENERATED_BODY()
 
@@ -26,16 +26,16 @@ public:
 	AAZPlayerController_Server();
 #pragma region Inherited function
 protected:
-	/** */
-	virtual void BeginPlay() override;
-	/** */
-	//virtual void Tick(float delta_seconds) override;
-	/** */
-	virtual void SetupInputComponent() override;
-	/** */
-	virtual void OnPossess(APawn* pawn) override;
-	/** */
-	virtual void BeginDestroy() override;
+	///** */
+	//virtual void BeginPlay() override;
+	///** */
+	////virtual void Tick(float delta_seconds) override;
+	///** */
+	//virtual void SetupInputComponent() override;
+	///** */
+	//virtual void OnPossess(APawn* pawn) override;
+	///** */
+	//virtual void BeginDestroy() override;
 #pragma endregion
 public:
 	void TempDevelopForceUpdatePlayer_Origin(int32 client_index, FVector pos);
@@ -84,4 +84,6 @@ public:
 	void Send_UpdatePlayerState_Playable(int32 client_index, int32 capture_type, int32 capture_value, int32 capture_mask);
 #pragma endregion
 #pragma endregion 
+protected:
+	UPROPERTY() class UAZGameInstance* game_instance_;
 };

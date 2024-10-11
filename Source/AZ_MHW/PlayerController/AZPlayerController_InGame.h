@@ -97,8 +97,8 @@ public:
 #pragma endregion
 
 #pragma region InGame Recieve
-	TMap<int32, AAZPlayer_Remotable*> remotable_player_map_;
-	TMap<int32, AAZPlayerState_Client*> remotable_player_state_map_;
+	UPROPERTY() TMap<int32, AAZPlayer_Remotable*> remotable_player_map_;
+	UPROPERTY() TMap<int32, AAZPlayerState_Client*> remotable_player_state_map_;
 	
 	void AddPlayerState_Remotable(int32 guid, const FAZPlayerCharacterState& character_state, const FAZPlayerEquipmentState& equipment_state);
 	/** 서버에서 호출하여, 클라에 원격 캐릭터 생성 (접속)*/

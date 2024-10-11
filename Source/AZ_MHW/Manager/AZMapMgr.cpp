@@ -216,48 +216,7 @@ void UAZMapMgr::MapEnter(uint32 map_index, FVector enter_pos, float enter_angle)
 			EMapType map_type = UAZUtility::StringToEnum<EMapType>(map_data->map_type);
 			if (EMapType::Lobby == static_cast<EMapType>(map_type))
 			{
-				//if (LHGameInstance->QuestMgr->IsReservedBeginChapter())
-				//{
-				//	if (ALHGameMode_InGame* gm = Cast<ALHGameMode_InGame>(LHGameInstance->GetGameMode()))
-				//	{
-				//		if (AAZPlayer_Playable* player = AZGameInstance->GetPlayer())
-				//		{
-				//			if (player->GetNpcTalkComponent()->IsTalk())
-				//				player->EndNpcTalk();
-				//		}
-				//		bImmediatelySameMapEnterProc = false;
-				//		gm->GetStateMachine()->ChangeState(EGameState::BeginChapter);
-
-				//		auto func = [this, enterPos, enterAngle]()->void			// 지금 말고 나중에 연출 끝나면 위치 이동 
-				//		{
-				//			this->SameMapEnterProc(enterPos, enterAngle);
-				//		};
-				//		CallBackQuestWarp = func;
-				//	}
-				//}
-				//else
-				//{
-				//	if (ULHWidget_BlackInOut* ui = LHGameInstance->GetHUD()->OpenUI<ULHWidget_BlackInOut>(EUIName::LHWidget_BlackInOut))
-				//	{
-				//		auto func = [ui, this, enterPos, enterAngle]()->void
-				//		{
-				//			ui->PlayExit();
-				//			this->SameMapEnterProc(enterPos, enterAngle);
-				//		};
-				//		bImmediatelySameMapEnterProc = false;
-				//		ui->SetCallBackFunc(func);
-				//	}
-				//}
-
-				//if (UAZWidget_InGame* ui = LHGameInstance->GetHUD()->GetUI<ULHWidget_InGame>(EUIName::LHWidget_InGame))
-				//{
-				//	ui->ChangeExitSwitcher(false);
-				//}
-
-				//if (ALHGameMode_InGame* gm = Cast<ALHGameMode_InGame>(LHGameInstance->GetGameMode()))
-				//{
-				//	gm->ActiveEnvironmentReset();
-				//}
+				
 			}
 			else if (EMapType::Dungeon == map_type)
 			{
@@ -1541,26 +1500,6 @@ void UAZMapMgr::AddSubLevelFromPackageName(const FName& package_name, UPackage* 
 bool UAZMapMgr::HasFloor(AAZCharacter* character)
 {
 	// FIXME 병합시 바닥체크 넣기
-	/*float traceZ = character->GetAZCharacterMovement()->ClinetZ_TraceStartZ;
-	FVector location = character->GetActorServerLocation();
-	FVector start = location + FVector::UpVector * traceZ;
-	FVector end = location - FVector::UpVector * traceZ;
-	TArray<AActor*> actorsToIgnore;
-	FHitResult outHit;
-
-	bool result = false;
-
-	result = UKismetSystemLibrary::LineTraceSingle(character, start, end, UEngineTypes::ConvertToTraceType(LH_Trace_Floor), false, actorsToIgnore, EDrawDebugTrace::None, outHit, true);
-	if (result)
-	{
-		return true;
-	}
-
-	result = UKismetSystemLibrary::LineTraceSingle(character, start, end, UEngineTypes::ConvertToTraceType(LH_TRACE_SWIM), false, actorsToIgnore, EDrawDebugTrace::None, outHit, true);
-	if (result)
-	{
-		return true;
-	}*/
 
 	return false;
 }

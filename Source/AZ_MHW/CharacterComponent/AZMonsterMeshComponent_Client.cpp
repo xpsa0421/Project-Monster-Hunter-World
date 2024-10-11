@@ -1,4 +1,4 @@
-﻿// Copyright Team AZ. All Rights Reserved.
+// Copyright Team AZ. All Rights Reserved.
 
 #include "AZ_MHW/CharacterComponent/AZMonsterMeshComponent_Client.h"
 #include "AZ_MHW/Character/Monster/AZMonster_Client.h"
@@ -228,7 +228,7 @@ void UAZMonsterMeshComponent_Client::CloseEyes(bool should_close)
 	SetMaterialVisibility(FName("Eyelid_Default"), should_close);
 }
 
-// Close eyes, wait for 0.2 seconds, the open 
+// Close eyes, wait for 0.2 seconds, then open 
 void UAZMonsterMeshComponent_Client::BlinkEyes()
 {
 	// do not blink if blinded

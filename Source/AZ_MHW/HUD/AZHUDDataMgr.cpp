@@ -93,21 +93,7 @@ bool UAZHUDDataMgr::RequestWidgetData(EUIName ui_name)
 	}
 
 	// FIXME (socket merged check) data request
-	//if (auto* socketHolder = LHGameInstance->GetSocketHolder(ESocketHolderType::Gate))
-	//{
-	//	switch (uiName)
-	//	{
-	//	case EUIName::LHWidget_PKMain:
-	//	{
-	//		FCG_PK_TOTAL_INFO_SYN msg;
-	//		socketHolder->SendPacket(&msg);
-	//	}
-	//	break;
-	//	}
-
-	//	if (WidgetDataRequestStates.Contains(uiName))
-	//		WidgetDataRequestStates[uiName] = ELHWidgetDataRequestState::Requested;
-	//}
+	
 	return false;
 }
 

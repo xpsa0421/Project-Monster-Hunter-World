@@ -31,7 +31,7 @@ public:
 
 private:
 	UPROPERTY(meta = (BindWidget)) UImage* image_waiting_;
-	UWidgetAnimation* waiting_ani_;
+	UPROPERTY() UWidgetAnimation* waiting_ani_;
 	static bool is_force_waiting_;
 	FTimerHandle show_waiting_timer_handler_;
 	FString sended_packet_name_;

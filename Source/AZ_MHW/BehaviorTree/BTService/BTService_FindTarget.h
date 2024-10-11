@@ -23,7 +23,4 @@ class AZ_MHW_API UBTService_FindTarget : public UBTService
 protected:
 	UPROPERTY(EditAnywhere, Category = "AZ")
 	FBlackboardKeySelector blackboard_key;
-
-	UPROPERTY(EditAnywhere, Category = "AZ")
-	float update_interval_ = 0;
 };

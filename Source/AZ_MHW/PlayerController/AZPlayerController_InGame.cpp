@@ -37,6 +37,7 @@ AAZPlayerController_InGame::AAZPlayerController_InGame()
 	camera_comp_->SetupAttachment(spring_arm_comp_);
 	spring_arm_comp_->bUsePawnControlRotation = true;
 	camera_comp_->bUsePawnControlRotation = false;
+	spring_arm_comp_->SetWorldLocation(FVector(0, 0, 90));
 
 	bit_move_forward=false;
 	bit_move_left=false;
@@ -450,7 +451,7 @@ void AAZPlayerController_InGame::OpenQuestTemp()
 {
 	if (quest_msgbox_) return;
 	auto msgbox = game_instance_->GetHUD()->OpenMsgBox(EUIMsgBoxType::Basic, TEXT(""), EUIMsgBoxBtnType::Confirm,
-		this, TEXT(""), L"", L"", L"확인");
+		this, TEXT(""), L"", L"", L"입장");
 
 	if (msgbox)
 	{
@@ -481,7 +482,7 @@ void AAZPlayerController_InGame::TestChangeEquipment()
 		ChangeEquipment(11241);
 		ChangeEquipment(11741);
 		//ChangeEquipment(12241);
-		playable_player_state_->equipment_state_.head_item_id = 12500;
+		//playable_player_state_->equipment_state_.head_item_id = 12500;
 		ChangeEquipment(12531);
 	}
 	else
@@ -495,7 +496,7 @@ void AAZPlayerController_InGame::TestChangeEquipment()
 		ChangeEquipment(11703);	
 		
 		//ChangeEquipment(12203);
-		playable_player_state_->equipment_state_.head_item_id = 12500;
+		//playable_player_state_->equipment_state_.head_item_id = 12500;
 		ChangeEquipment(12531);
 		
 	}

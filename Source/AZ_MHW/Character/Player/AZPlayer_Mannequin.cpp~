@@ -1,4 +1,4 @@
-// Copyright Team AZ. All Rights Reserved.
+﻿// Copyright Team AZ. All Rights Reserved.
 
 #include "AZPlayer_Mannequin.h"
 
@@ -20,7 +20,7 @@ AAZPlayer_Mannequin::AAZPlayer_Mannequin()
 	camera_comp_ = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	spring_arm_comp_->SetupAttachment(GetRootComponent());
 	camera_comp_->SetupAttachment(spring_arm_comp_);
-	spring_arm_comp_->TargetArmLength = 85.f;
+	spring_arm_comp_->TargetArmLength = 250.f;
 	spring_arm_comp_->bUsePawnControlRotation = false;
 	camera_comp_->bUsePawnControlRotation = false;
 	//camera_comp_->Activate();
@@ -30,8 +30,9 @@ void AAZPlayer_Mannequin::BeginPlay()
 {
 	Super::BeginPlay();
 	game_instance_->GetPlayerController()->SetViewTarget(this);
-	spring_arm_comp_->SetWorldRotation(FRotator(-10, 160, 0));
-	spring_arm_comp_->SetWorldLocation(FVector(0, 25, 60));
+	spring_arm_comp_->SetWorldRotation(FRotator(180,350,180));
+	spring_arm_comp_->SetWorldLocation(FVector(0,75,-20));
+	
 }
 
 

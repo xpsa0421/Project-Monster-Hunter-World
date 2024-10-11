@@ -1,4 +1,4 @@
-﻿// Copyright Team AZ. All Rights Reserved.
+// Copyright Team AZ. All Rights Reserved.
 
 #pragma once
 

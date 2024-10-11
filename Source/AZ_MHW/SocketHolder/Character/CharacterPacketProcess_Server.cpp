@@ -18,10 +18,7 @@ void UPacketFunction::CreatePlayerOriginRequest(UINT32 client_index, CREATE_PLAY
 {
 	auto server_controller =Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
 
-	
-	server_controller->AddPlayer_Origin(
-		client_index,
-		packet->character_index);
+	game_instance_->server_controller_->AddPlayer_Origin(client_index, packet->character_index);
 }
 
 
@@ -29,15 +26,14 @@ void UPacketFunction::DestroyPlayerOriginRequest(UINT32 client_index)
 {
 	auto server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
 
-	server_controller->RemovePlayer_Origin(
-		client_index);
+	game_instance_->server_controller_->RemovePlayer_Origin(client_index);
 }
 
 void UPacketFunction::ActionPlayerOriginRequest(UINT32 client_index, ACTION_PLAYER_PACKET* packet)
 {
 	auto server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
 
-	server_controller->ActionPlayer_Origin(
+	game_instance_->server_controller_->ActionPlayer_Origin(
 		client_index,
 		packet->current_position,
 		packet->current_direction,
@@ -48,7 +44,7 @@ void UPacketFunction::EquipPlayerOriginRequest(UINT32 client_index, EQUIPMENT_PL
 {
 	auto server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
 
-	server_controller->EquipPlayer_Origin(
+	game_instance_->server_controller_->EquipPlayer_Origin(
 		client_index,
 		packet->item_id);
 }
@@ -57,7 +53,7 @@ void UPacketFunction::GesturePlayerOriginRequest(UINT32 client_index, GESTURE_PL
 {
 	auto server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
 
-	server_controller->GesturePlayer_Origin(
+	game_instance_->server_controller_->GesturePlayer_Origin(
 		client_index,
 		packet->gesture_id);
 }
@@ -67,7 +63,7 @@ void UPacketFunction::DevelopPlayerForceUpdateCommand(UINT32 client_index, ACTIO
 {
 	auto server_controller = Cast<AAZPlayerController_Server>(game_instance_->GetPlayerController());
 
-	server_controller->TempDevelopForceUpdatePlayer_Origin(
+	game_instance_->server_controller_->TempDevelopForceUpdatePlayer_Origin(
 		client_index,
 		packet->current_position);
 }

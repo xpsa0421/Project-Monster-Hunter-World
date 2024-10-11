@@ -1,4 +1,4 @@
-﻿// Copyright Team AZ. All Rights Reserved.
+// Copyright Team AZ. All Rights Reserved.
 
 
 #include "AZPlayerController_Server.h"
@@ -14,38 +14,36 @@
 AAZPlayerController_Server::AAZPlayerController_Server()
 {
 	PrimaryActorTick.bCanEverTick = false;
-	
 }
 
-void AAZPlayerController_Server::BeginPlay()
-{
-	Super::BeginPlay();
-
-
-}
-
-void AAZPlayerController_Server::SetupInputComponent()
-{
-	Super::SetupInputComponent();
-	
-}
-
-void AAZPlayerController_Server::OnPossess(APawn* pawn)
-{
-	Super::OnPossess(pawn);
-	
-}
-
-void AAZPlayerController_Server::BeginDestroy()
-{
-	Super::BeginDestroy();
-
-}
+//void AAZPlayerController_Server::BeginPlay()
+//{
+//	Super::BeginPlay();
+//}
+//
+//void AAZPlayerController_Server::SetupInputComponent()
+//{
+//	Super::SetupInputComponent();
+//	
+//}
+//
+//void AAZPlayerController_Server::OnPossess(APawn* pawn)
+//{
+//	Super::OnPossess(pawn);
+//	
+//}
+//
+//void AAZPlayerController_Server::BeginDestroy()
+//{
+//	Super::BeginDestroy();
+//
+//}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 void AAZPlayerController_Server::AddPlayerState_Origin(int32 client_index, int32 character_id)
 {
+	UE_LOG(LogTemp, Log, TEXT("AddPlayerState_Origin Entered"));
 	AAZPlayerState_Client* origin_player_state = nullptr;
 	origin_player_state = GetWorld()->SpawnActor<AAZPlayerState_Client>();
 	const auto& info =game_instance_->game_cache_info_->GetCharacterSimpleInfo(character_id);
@@ -75,6 +73,8 @@ void AAZPlayerController_Server::RemovePlayerState_Origin(int32 client_index)
 
 void AAZPlayerController_Server::AddPlayer_Origin(int32 client_index,int32 character_id)
 {
+	game_instance_ = Cast<UAZGameInstance>(GetWorld()->GetGameInstance());
+
 	//TODO TEMP임시(인게임 접속전에 호출햇어야함)
 	AddPlayerState_Origin(client_index, character_id);
 

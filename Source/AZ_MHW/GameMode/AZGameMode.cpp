@@ -249,14 +249,6 @@ void AAZGameMode::OnAsyncLoadCompleted(const FName& package_name, UPackage* load
 void AAZGameMode::GetSeamlessTravelActorList(bool bToTransition, TArray<AActor*>& ActorList)
 {
 	Super::GetSeamlessTravelActorList(bToTransition, ActorList);
-
-	// FixMe
-	/*TArray<AActor*> actors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ALHActor_LoadingScene::StaticClass(), actors);
-	for (auto actor : actors)
-	{
-		ActorList.Add(actor);
-	}*/
 }
 
 void AAZGameMode::Tick(float delta_seconds)
@@ -314,10 +306,6 @@ USoundWave* AAZGameMode::GetBaseBGM()
 	}
 
 	// FIXME 맵 인덱스에 따라 bgm 틀어줌
-	//if (ULHGameSingleton::Instance()->GetResourceMgr())
-	//{
-	//	return ULHGameSingleton::Instance()->GetResourceMgr()->GetBaseBGM(GetGameModeType(), LHGameInstance->MapMgr->GetMapIndex());
-	//}
 
 	return nullptr;
 }

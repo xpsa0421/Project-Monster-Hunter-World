@@ -201,12 +201,11 @@ void UAZMonsterAggroComponent::UpdateByRange()
 	TArray<AActor*, FDefaultAllocator> ignore_actors;
 	TArray<AActor*> actors_in_range;
 	ignore_actors.Add(owner_.Get());
-
-#ifdef WITH_EDITOR
 	UKismetSystemLibrary::SphereOverlapActors(GetWorld(), owner_->GetActorLocation(), percept_range_,
 		owner_->hit_object_types_, AAZPlayer_Origin::StaticClass(), ignore_actors, actors_in_range);
-	UKismetSystemLibrary::DrawDebugSphere(owner_.Get(), owner_->GetActorLocation(), percept_range_, 24, FLinearColor::Gray,
-		1.0f, 4.0f);
+
+#ifdef WITH_EDITOR
+	UKismetSystemLibrary::DrawDebugSphere(owner_.Get(), owner_->GetActorLocation(), percept_range_, 24, FLinearColor::Gray, 1.0f, 4.0f);
 #endif
 	
 	// Get serial number of actors in range
