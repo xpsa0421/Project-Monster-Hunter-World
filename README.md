@@ -35,6 +35,9 @@ _Original repository: [AZ_MHW](https://github.com/AZ-KGCA/AZ_MHW/tree/develop_te
 
 <br />
 
+### Gameplay Video
+[![InGame Video](https://img.youtube.com/vi/b8ydRoG0W_8/0.jpg)](https://www.youtube.com/watch?v=b8ydRoG0W_8)
+
 ### Preview
 |  |   |
 |---|---|
